@@ -6,6 +6,9 @@
 			Licence prom 12
 			Master 	prom 9 
 
-	2	.	Apetrao eto ny info momba anlah
+	2	.	Danih Stéphane Rakotoarison Harilanto
+			ETU 911
+			Licence prom 12
+			Master prom 9
 
 
