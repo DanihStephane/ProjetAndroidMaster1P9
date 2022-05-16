@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center">
+
+
+
+    <LinearLayout
+        android:id="@+id/liste"
+        android:layout_width="300dp"
+        android:layout_height="60dp"
+        android:orientation="horizontal"
+        android:background="@drawable/custom_boite_stroke"
+        android:layout_margin="10dp"
+        android:layout_gravity="center">
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingTop="10dp"
+            android:paddingLeft="30dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginRight="48dp"
+            android:src="@drawable/ic_liste_des_compte"/>
+
+        <TextView
+            android:layout_width="@dimen/large"
+            android:layout_height="wrap_content"
+            android:paddingTop="16dp"
+            android:text="Liste des comptes"
+            android:textColor="@color/green"
+            android:textSize="20dp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/releves"
+        android:layout_width="300dp"
+        android:layout_height="60dp"
+        android:orientation="horizontal"
+        android:background="@drawable/custom_boite_stroke"
+        android:layout_margin="10dp"
+        android:layout_gravity="center">
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingTop="10dp"
+            android:paddingLeft="30dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginRight="48dp"
+            android:src="@drawable/ic_releves_d_operation"/>
+
+        <TextView
+            android:layout_width="@dimen/large"
+            android:layout_height="wrap_content"
+            android:paddingTop="16dp"
+            android:text="Relevé d'operations"
+            android:textColor="@color/green"
+            android:textSize="20dp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/rib"
+        android:layout_width="300dp"
+        android:layout_height="60dp"
+        android:orientation="horizontal"
+        android:background="@drawable/custom_boite_stroke"
+        android:layout_margin="10dp"
+        android:layout_gravity="center">
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingTop="10dp"
+            android:paddingLeft="91dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginRight="48dp"
+            android:src="@drawable/ic_rib"/>
+
+        <TextView
+            android:layout_width="@dimen/large"
+            android:layout_height="wrap_content"
+            android:paddingTop="16dp"
+            android:text="RIB"
+            android:textColor="@color/green"
+            android:textSize="20dp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+</LinearLayout>

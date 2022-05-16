@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center">
+
+
+    <LinearLayout
+        android:id="@+id/demande"
+        android:layout_width="300dp"
+        android:layout_height="60dp"
+        android:orientation="horizontal"
+        android:background="@drawable/custom_boite_stroke"
+        android:layout_margin="10dp"
+        android:layout_gravity="center">
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingTop="10dp"
+            android:paddingLeft="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginRight="48dp"
+            android:src="@drawable/ic_demande_de_chequier"/>
+
+        <TextView
+            android:layout_width="@dimen/large"
+            android:layout_height="wrap_content"
+            android:paddingTop="16dp"
+            android:text="Demande de chéquier"
+            android:textColor="@color/green"
+            android:textSize="20dp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/histo_demande"
+        android:layout_width="320dp"
+        android:layout_height="60dp"
+        android:orientation="horizontal"
+        android:background="@drawable/custom_boite_stroke"
+        android:layout_margin="10dp"
+        android:layout_gravity="center">
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingTop="10dp"
+            android:paddingLeft="10dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginRight="48dp"
+            android:src="@drawable/ic_historique"/>
+
+        <TextView
+            android:layout_width="@dimen/large"
+            android:layout_height="wrap_content"
+            android:paddingTop="16dp"
+            android:text="Historique des demandes"
+            android:textColor="@color/green"
+            android:textSize="20dp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/opposition"
+        android:layout_width="300dp"
+        android:layout_height="60dp"
+        android:orientation="horizontal"
+        android:background="@drawable/custom_boite_stroke"
+        android:layout_margin="10dp"
+        android:layout_gravity="center">
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingTop="10dp"
+            android:paddingLeft="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginRight="48dp"
+            android:src="@drawable/ic_opoosition_de_cheque"/>
+
+        <TextView
+            android:layout_width="@dimen/large"
+            android:layout_height="wrap_content"
+            android:paddingTop="16dp"
+            android:text="Opposition de chèque"
+            android:textColor="@color/green"
+            android:textSize="20dp"
+            android:textStyle="bold" />
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/histo_opposition"
+        android:layout_width="320dp"
+        android:layout_height="60dp"
+        android:orientation="horizontal"
+        android:background="@drawable/custom_boite_stroke"
+        android:layout_margin="10dp"
+        android:layout_gravity="center">
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingTop="10dp"
+            android:paddingLeft="5dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginRight="48dp"
+            android:src="@drawable/ic_historique_opposition"/>
+
+        <TextView
+            android:layout_width="@dimen/large"
+            android:layout_height="wrap_content"
+            android:paddingTop="16dp"
+            android:text="Historique des oppositions"
+            android:textColor="@color/green"
+            android:textSize="20dp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+
+
+</LinearLayout>

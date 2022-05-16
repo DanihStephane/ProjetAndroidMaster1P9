@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_columnWeight="1"
+        android:layout_rowWeight="1"
+        android:layout_margin="5dp">
+
+        <LinearLayout
+            android:id="@+id/linearLayout"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:background="@drawable/custom_boite_stroke">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Nom et Prénoms :"
+                android:textSize="@dimen/text"
+                android:textColor="@color/white"
+                android:background="@color/green"
+                android:layout_margin="@dimen/margin"/>
+            <TextView
+                android:id="@+id/nom"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="RASOA Riana"
+                android:textSize="@dimen/text"
+                android:textColor="@color/black"
+                android:layout_margin="@dimen/margin"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Banque :"
+                android:textSize="@dimen/text"
+                android:textColor="@color/white"
+                android:background="@color/green"
+                android:layout_margin="@dimen/margin"/>
+            <TextView
+                android:id="@+id/banque"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="00005"
+                android:textSize="@dimen/text"
+                android:textColor="@color/black"
+                android:layout_margin="@dimen/margin"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Agence :"
+                android:textSize="@dimen/text"
+                android:textColor="@color/white"
+                android:background="@color/green"
+                android:layout_margin="@dimen/margin"/>
+            <TextView
+                android:id="@+id/agence"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="00001"
+                android:textSize="@dimen/text"
+                android:textColor="@color/black"
+                android:layout_margin="@dimen/margin"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Numero du compte :"
+                android:textSize="@dimen/text"
+                android:textColor="@color/white"
+                android:background="@color/green"
+                android:layout_margin="@dimen/margin"/>
+            <TextView
+                android:id="@+id/numero"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="13045990200"
+                android:textSize="@dimen/text"
+                android:textColor="@color/black"
+                android:layout_margin="@dimen/margin"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Clés Rib :"
+                android:textSize="@dimen/text"
+                android:textColor="@color/white"
+                android:background="@color/green"
+                android:layout_margin="@dimen/margin"/>
+            <TextView
+                android:id="@+id/rib"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="26"
+                android:textSize="@dimen/text"
+                android:textColor="@color/black"
+                android:layout_margin="@dimen/margin"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Statut :"
+                android:textSize="@dimen/text"
+                android:textColor="@color/white"
+                android:background="@color/green"
+                android:layout_margin="@dimen/margin"/>
+            <TextView
+                android:id="@+id/statut"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Actif"
+                android:textSize="@dimen/text"
+                android:textColor="@color/black"
+                android:layout_margin="@dimen/margin"/>
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+</LinearLayout>
