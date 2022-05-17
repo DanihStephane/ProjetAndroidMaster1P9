@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/Users/Harilanto/AndroidStudioProjects/KidsApp/app/src/main/res/drawable/custom_boite_grey.xml" value="0.1095" />
+        <entry key="..\:/Users/Harilanto/AndroidStudioProjects/KidsApp/app/src/main/res/drawable/custom_boite_solid.xml" value="0.1715" />
+        <entry key="..\:/Users/Harilanto/AndroidStudioProjects/KidsApp/app/src/main/res/drawable/ic_home.xml" value="0.103" />
+        <entry key="..\:/Users/Harilanto/AndroidStudioProjects/KidsApp/app/src/main/res/drawable/ic_login_front.xml" value="0.1715" />
+        <entry key="..\:/Users/Harilanto/AndroidStudioProjects/KidsApp/app/src/main/res/drawable/solid_white.xml" value="0.1095" />
+        <entry key="..\:/Users/Harilanto/AndroidStudioProjects/KidsApp/app/src/main/res/drawable/strok_red.xml" value="0.103" />
+        <entry key="..\:/Users/Harilanto/AndroidStudioProjects/KidsApp/app/src/main/res/layout/activity_accueil.xml" value="0.17074275362318841" />
+        <entry key="..\:/Users/Harilanto/AndroidStudioProjects/KidsApp/app/src/main/res/layout/activity_login.xml" value="0.22" />
+        <entry key="..\:/Users/Harilanto/AndroidStudioProjects/KidsApp/app/src/main/res/layout/activity_splash_screen.xml" value="0.17074275362318841" />
+        <entry key="..\:/Users/Harilanto/AndroidStudioProjects/KidsApp/app/src/main/res/layout/check_internet_dialog.xml" value="0.16485507246376813" />
+        <entry key="..\:/Users/Harilanto/AndroidStudioProjects/KidsApp/app/src/main/res/layout/custom_toast.xml" value="0.16485507246376813" />
+        <entry key="..\:/Users/Harilanto/AndroidStudioProjects/KidsApp/app/src/main/res/layout/main_toolbar.xml" value="0.1" />
+        <entry key="..\:/Users/Harilanto/AndroidStudioProjects/KidsApp/app/src/main/res/layout/solid_white.xml" value="0.17074275362318841" />
+        <entry key="..\:/Users/Harilanto/AndroidStudioProjects/KidsApp/app/src/main/res/menu/menu.xml" value="0.2" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="1.8" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>

@@ -1,9 +1,0 @@
-<resources>
-    <string name="app_name">Kids application</string>
-    <string name="btn_size">75dp</string>
-    <string name="item_default_name">Option</string>
-<!--    <string name="base_url">http://192.168.56.1:8083/mbanking/rest_api/</string>-->
-    <string name="base_url">http://192.168.1.247/mbanking/rest_api/</string>
-    <string name="loading">veuillez patienter un peu s\'il vous plait ...</string>
-    <string name="about">Rakotoarison Harilanto Danih Stephane, Developpeur Web et Mobile, P12-A n°41 ETU000911, Sipem Banque Mobile Banking ©2021</string>
-</resources>
