@@ -17,6 +17,9 @@ import android.view.View;
 import android.widget.LinearLayout;
 
 import mg.master1p9.kidsapp.connectivite.NetWorkChangeListener;
+import mg.master1p9.kidsapp.popups.PopupChiffres;
+import mg.master1p9.kidsapp.sousMenu.chiffres.ChiffresCroissant;
+import mg.master1p9.kidsapp.sousMenu.chiffres.ChiffresDecroissant;
 
 public class AccueilActivity extends AppCompatActivity {
 
@@ -43,6 +46,32 @@ public class AccueilActivity extends AppCompatActivity {
         this.couleurs = findViewById(R.id.couleurs);
         this.formes = findViewById(R.id.formes);
         this.logout = findViewById(R.id.logout);
+
+        this.chiffres.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                PopupChiffres popupChiffres = new PopupChiffres(accueilActivity);
+                popupChiffres.getCroissant().setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        Intent otherActivity = new Intent(getApplicationContext(), ChiffresCroissant.class);
+                        startActivity(otherActivity);
+                        popupChiffres.dismiss();
+                        finish();
+                    }
+                });
+                popupChiffres.getDecroissant().setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        Intent otherActivity = new Intent(getApplicationContext(), ChiffresDecroissant.class);
+                        startActivity(otherActivity);
+                        popupChiffres.dismiss();
+                        finish();
+                    }
+                });
+                popupChiffres.build();
+            }
+        });
 
         this.logout.setOnClickListener(new View.OnClickListener() {
             @Override
