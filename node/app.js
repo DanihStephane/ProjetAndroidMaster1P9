@@ -15,6 +15,7 @@ const upload = multer({ limits: { fieldSize: 50000000 } });
 /* Initialisation des controllers */
 
 const UtilisateurController = require('./app/controllers/Utilisateur.controller');
+const JeuController = require('./app/controllers/Jeu.controller');
 
 /* Configuration de la constante app */
 const app = express();
@@ -45,6 +46,7 @@ app.use(errorHandler);
 
 /* Intégration des controllers à la constante app */
 UtilisateurController(app);
+JeuController(app);
 
 
 /** Gestion des événements liés au WebSocket */

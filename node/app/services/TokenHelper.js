@@ -3,6 +3,8 @@
 const md5 = require('md5');
 const { expirationToken } = require('../../config/app_config/token');
 const DateHelper = require('../services/DateHelper');
+const { dbconnect } = require('../services/DBConnection.service');
+
 
 module.exports = class TokenHelper {
   constructor () {
@@ -25,19 +27,49 @@ module.exports = class TokenHelper {
   }
 
   async insertToken (con, user) {
-   /** **/
-   throw new Error('Not supported yet');
+        let id_user = user._id;
+        let insertionDate = new Date();
+        let dateHelper = new DateHelper();
+        let insertionDateToken = dateHelper.addDate(
+            insertionDate, 
+            this.expirationToken, 
+            dateHelper.equivalenceMilliseconde.jour
+        );
+        // let token = md5(insertionDate  + id_user + insertionDateToken);
+        let token = TokenHelper.generateToken(id_user + insertionDateToken);
+        
+        let query = {id_utilisateur:id_user, token_utilisateur:token, date_validation:insertionDateToken};
+        con.collection('token_utilisateur').insert(query);
+        return token;
    
   }
 
-  async deleteToken (con, token) {
-    /*** ****/
-    throw new Error('Not supported yet');
+  async deleteToken (con , token) {
+    let db = null;
+    let tokenHelper = new TokenHelper();
+    try{
+       var query = {token_utilisateur : token};
+       var result = await  con.collection("token_utilisateur").deleteOne(query);
+
+       
+       return result
+       
+    }catch(err){
+          console.log(err);
+        throw err;
+    } finally {
+        //   if(con!=null) con.close();
+    }
+    // throw new Error('Not supported yet');
   }
 
   async getUserByToken (con, token) {
-    /** Not Supported Yet **/
-    throw new Error('Not Supported Yet');
+        let query = {token_utilisateur : token};
+        let token_utilisateur = await con.collection('token_utilisateur').find(query).toArray();
+        let id_utilisateur = token_utilisateur[0].id_utilisateur;
+        let query_utlisateur = {_id : id_utilisateur};
+        let user = await con.collection('Utilisateur').find(query_utlisateur).toArray();
+        return user[0];
   }
 
   static generateToken (id) {

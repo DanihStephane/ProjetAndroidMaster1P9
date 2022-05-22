@@ -54,50 +54,94 @@ module.exports = class UtilisateurModel {
 
   
 
-  async login (pseudo, password) {
-    let con = null;
+  async login (data) {
+    let con , db = null;
     const tokenHelper = new TokenHelper();
     try {
-      con = dbconnect();
-      con.connect();
-      await con.query('BEGIN');
+       con= await dbconnect();
+       await con.connect();
+       db = await con.db("Kids");
+       
+      // Tester l'authentification de l'utilisateur effectuant la requête
+            
+      var result = await this.get_utilisateur_with_connexion(db , data);
+      if(result == null || result.length==0) {
+          throw new Error("Mot de passe ou identifiant incorrecte");
+      }
 
-      /***  A implementer ***/
-
-      throw new Error('Not supported Yet');
-
-      /*** ***/
+      let user = result;
+      let token = await tokenHelper.insertToken(db, user);
+      return {
+          token : token,
+          user : user   
+      };
 
     } catch (err) {
-      if (con !== null) {
-        await con.query('ROLLBACK');
-      }
-      throw err;
+        throw err;
     } finally {
-      if (con !== null) con.end();
+      // if (con !== null) con.end();
     }
   }
 
+  async get_utilisateur_with_connexion(db , data) {
+    var query = data;
+    var result = await  db.collection("Utilisateur").findOne(query);
+    
+    return result;
+ }
+
+  async get_utilisateur(data) {
+    let con = null;
+    let db = null;
+    let tokenHelper = new TokenHelper();
+    try{
+       con= await dbconnect();
+       await con.connect();
+       db = await con.db("ekalydb");
+       // Tester l'authentification de l'utilisateur effectuant la requête
+       
+        var result = await this.get_utilisateur_with_connexion(db , data);
+        if(result == null || result.length==0) {
+            throw new Error("Mot de passe ou identifiant incorrecte");
+        }
+
+        let user = result;
+        let token = await tokenHelper.insertToken(db, user);
+        return {
+            token : token,
+            user : user   
+        };
+       
+   }catch(err){
+       console.log(err);
+      throw err;
+   } finally {
+    //   if(con!=null) con.close();
+   }
+ }
+
   async logout (authorization) {
     let con = null;
+    let db = null;
     const tokenHelper = new TokenHelper();
     const token = tokenHelper.getTokenFromBearerToken(authorization);
+    console.log(token);
     try {
-      con = dbconnect();
-      con.connect();
-      await con.query('BEGIN');
-      await tokenHelper.deleteToken(con, token);
-      await con.query('COMMIT');
+      con= await dbconnect();
+       await con.connect();
+       db = await con.db("Kids");
+      await tokenHelper.deleteToken(db , token);
+      // await con.query('COMMIT');
       return {
         message: 'Vous vous êtes déconnectez avec succès'
       };
     } catch (err) {
-      if (con !== null) {
-        await con.query('ROLLBACK');
-      }
+      // if (con !== null) {
+      //   // await con.query('ROLLBACK');
+      // }
       throw err;
     } finally {
-      if (con !== null) con.end();
+      // if (con !== null) con.end();
     }
   }
 
