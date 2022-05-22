@@ -145,19 +145,5 @@ module.exports = class UtilisateurModel {
     }
   }
 
-  async createUser(data) {
-    let user = null;
-    
-    user = {
-      "_id" : data._id,
-      "nom" : data.nom,
-      "prenom" : data.prenom,
-      "mail" : data.mail,
-      "identifiant" : data.identifiant
-    }
-
-    return user;
-  } 
-
 
 };
