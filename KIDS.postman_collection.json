@@ -49,6 +49,17 @@
 				}
 			},
 			"response": []
+		},
+		{
+			"name": "Insert Score",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": ""
+				}
+			},
+			"response": []
 		}
 	]
 }
