@@ -8,10 +8,29 @@
 		{
 			"name": "Avoir liste Jeu ",
 			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "70f3746e4703c181d80d1b3d04b7b973",
+							"type": "string"
+						}
+					]
+				},
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": ""
+					"raw": "https://kids-rest-api.herokuapp.com/getAllJeu",
+					"protocol": "https",
+					"host": [
+						"kids-rest-api",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"getAllJeu"
+					]
 				}
 			},
 			"response": []
@@ -19,10 +38,39 @@
 		{
 			"name": "Avoir lste score",
 			"request": {
-				"method": "GET",
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "70f3746e4703c181d80d1b3d04b7b973",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
 				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "idJeu",
+							"value": "1",
+							"type": "text"
+						}
+					]
+				},
 				"url": {
-					"raw": ""
+					"raw": "https://kids-rest-api.herokuapp.com/getAllScoreByIdJeu",
+					"protocol": "https",
+					"host": [
+						"kids-rest-api",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"getAllScoreByIdJeu"
+					]
 				},
 				"description": "Argument :\r\n- idJeu"
 			},
@@ -31,10 +79,34 @@
 		{
 			"name": "Login",
 			"request": {
-				"method": "GET",
+				"method": "POST",
 				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "identifiant",
+							"value": "USER 0001",
+							"type": "text"
+						},
+						{
+							"key": "mdp",
+							"value": "123456789",
+							"type": "text"
+						}
+					]
+				},
 				"url": {
-					"raw": ""
+					"raw": "https://kids-rest-api.herokuapp.com/login",
+					"protocol": "https",
+					"host": [
+						"kids-rest-api",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"login"
+					]
 				}
 			},
 			"response": []
@@ -42,10 +114,29 @@
 		{
 			"name": "Logout",
 			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "70f3746e4703c181d80d1b3d04b7b973",
+							"type": "string"
+						}
+					]
+				},
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": ""
+					"raw": "https://kids-rest-api.herokuapp.com/logout",
+					"protocol": "https",
+					"host": [
+						"kids-rest-api",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"logout"
+					]
 				}
 			},
 			"response": []
@@ -53,10 +144,44 @@
 		{
 			"name": "Insert Score",
 			"request": {
-				"method": "GET",
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "70f3746e4703c181d80d1b3d04b7b973",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
 				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "idJeu",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "score",
+							"value": "10",
+							"type": "text"
+						}
+					]
+				},
 				"url": {
-					"raw": ""
+					"raw": "https://kids-rest-api.herokuapp.com/insertScore",
+					"protocol": "https",
+					"host": [
+						"kids-rest-api",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"insertScore"
+					]
 				}
 			},
 			"response": []
